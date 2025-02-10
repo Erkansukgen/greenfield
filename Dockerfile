@@ -15,7 +15,7 @@ RUN git config --global url."https://${GH_TOKEN}@github.com".insteadOf "https://
 RUN cd /greenfield && make build
 
 # Pull greenfield into a second stage deploy alpine container
-FROM alpine:3.17
+FROM alpine:3.19.6
 
 ARG USER=greenfield
 ARG USER_UID=1000
